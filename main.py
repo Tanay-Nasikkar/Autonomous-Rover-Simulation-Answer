@@ -182,6 +182,7 @@ if __name__ == "__main__":
                 for idx in forward_indices:
                     # lidar_ranges contains distance measurements for each beam
                     if lidar_ranges[idx] < safety_threshold:
+                        print("Obstacle detected! Stopping to prevent collision.")
                         obstacle_detected = True
                         break
                 
